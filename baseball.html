@@ -52,7 +52,7 @@
 
 
         function defeated() {   // 패배 메시지 함수
-            const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`); // 페배 앞에 역따음표(`)
+            const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`); // 패배 앞에 역따음표(`)
             $logs.appendChild(message);
         }
         let out = 0;
@@ -110,8 +110,7 @@
             }
 
             tries.push(value);
-
-            // console.log('서브밋');
+            
             // console.log('서브밋', event); //event를 쓰면콘솔에 event속성이 뜸.
         });
     </script>
