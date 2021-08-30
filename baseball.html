@@ -56,6 +56,7 @@
             $logs.appendChild(message);
         }
         let out = 0;
+        let num = 0; // 실행횟수
         $form.addEventListener('submit', (event) => {
             event.preventDefault(); // 기본 동작 막기
             const value = $input.value;
@@ -98,9 +99,11 @@
             // 아웃 표시
             if (strike === 0 && ball === 0) {
                 out++;
-                $logs.append(`${value} 아웃`, document.createElement('br'));
+                num++;
+                $logs.append(`(${num}) ${value} 아웃`, document.createElement('br'));
             } else {
-                $logs.append(`${value}:${strike} 스트라이크 ${ball} 볼`, document.createElement('br'));
+                num++;
+                $logs.append(`(${num}) ${value} : ${strike} 스트라이크 ${ball} 볼`, document.createElement('br'));
             }
 
             // 3번 아웃
@@ -110,7 +113,7 @@
             }
 
             tries.push(value);
-            
+
             // console.log('서브밋', event); //event를 쓰면콘솔에 event속성이 뜸.
         });
     </script>
